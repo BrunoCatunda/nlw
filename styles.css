@@ -1,0 +1,165 @@
+* {
+    margin: 0;    /*margem*/
+    padding: 0%; /*preenchimento*/
+    box-sizing: border-box;  /*dimenção e borda da caixa*/
+    /*esse comando limpa o css 
+    de coisas desnecessarias do navegador*/
+}
+
+header{
+padding-top: 32px;
+}
+
+header div {
+    width: 128px;
+
+    margin: auto;
+
+    background-image: linear-gradient(90deg, #9572fc 0%, #e2d45c 50%, #43e7ad 100%);
+border-radius: 50%;
+
+display: flex;
+padding: 4px;
+transition: transform .3s;
+
+
+}
+
+header img{
+    width: 120px;
+border-radius: 50%;
+
+}
+
+header div:hover{
+    transform: scale(1.1);
+}
+
+
+ul {
+    list-style: none; /*usado para tirar pontos da lista
+    ordenadas ou não ordenada*/
+}
+
+  body{
+    background-image: url( ./imagem/fundo.jpg );
+background-position: top center;
+background-size: 100% auto;
+background-repeat: no-repeat;
+background-color: #121214;
+}
+ body * {
+    font-family: 'inter' sans-serif ;
+ }
+
+
+
+main{
+
+max-width: 580px; /*largura maxima*/
+width: 90; /*largura*/
+
+display: grid;
+gap: 24px; /*vão*/
+
+margin: 32px auto;
+}
+
+section{
+    color: aliceblue;
+    background-image: linear-gradient(90deg, #9572fc 0%, #e2d45c 50%, #43e7ad 100%);
+     padding-top: 4px;
+     border-radius: 10px;
+}
+
+section div {
+
+background-color: #2a2634;
+padding: 32px;
+padding-top: 24px;
+border-radius: 8px;
+transition: transform 0.3em;;
+
+}
+
+
+section h2{
+    font-weight: 900; /*espessura da fonte*/
+    font-size: 24px; /*tamanho da fonte*/
+    letter-spacing: 0,47px; /*espaço das letras*/
+}
+section p {
+    color: #a1a1aa ;
+}
+ 
+section ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    /*coloca caixa do lado da outra, gap distancias 
+    as imagens deixando um espaço*/
+margin-top: 24px; /*aumenta o espaço entre as caixas*/
+}
+
+.game-list img {
+
+    border-radius: 8%;
+    width: 90px;
+ }
+   
+.channel-list img {
+    border-radius: 50%;
+    width: 70px;
+    border: 1px solid white;
+}
+/* elemento usado para pulsar 
+quando passar o mouse em cima*/
+section ul li{
+    transition: transform .3s;
+}
+section ul
+li:hover{
+    transform: scale(1.1);
+}
+
+/*animetion*/ /*animal no cabeçalho(header div)*/
+ 
+header div{
+    animation: fromtop .2s 1s backwards;
+}
+
+@keyframes fromtop {
+    from{
+        opacity: 0;
+       transform: translateY(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main section{
+animation: totop .7s backwards;
+}
+main section:nth-child(1){
+    animation-delay: 0s;
+}
+main section:nth-child(2){
+    animation-delay: 1s;
+}
+main section:nth-child(3){
+    animation-delay: 2s;
+}
+
+
+@keyframes totop {
+    from{
+        opacity: 0;
+       transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
